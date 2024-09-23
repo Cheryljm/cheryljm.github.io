@@ -1,46 +1,56 @@
-
+.item-a {
+    grid-area: header;
+  }
+  .item-b {
+    grid-area: main;
+  }
+  .item-c {
+    grid-area: sidebar;
+  }
+  .item-d {
+    grid-area: footer;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main . sidebar"
+      "footer footer footer footer";
+  }
+  
 body{
     font-family: Helvetica,Arial, sans-serif;
     margin: 0px;
-    font-size: 2vw;
+    
 }
 
 #logo {
     margin: 0px;
-    padding: 8px;
+    padding: 30px;
     font-family: "Fredoka One", sans-serif;
-    width: 21%;
-    text-shadow:
-    1px 1px 0px black, /*bootom right shadow*/
-    -1px 1px 0px black , /* bottom left*/
-    1px -1px 0px black, /* top right*/
-    -1px -1px 0px black; /*top left*/
-   
+    width: 100%;
+    align-items:center;
+    justify-content: space-around;
+    background-color: rgb(99, 47, 255);
+    font-size: 4vh; 
 }
 
-ul {
-    margin: 0px;
-}
-body > header{
-    background-color: orange;
+
+body > header > nav > ul {
+    background-color: rgb(99, 47, 255);
     color: rgb(255, 255, 255);
     display: flex;
-    height: 12vh;
-    align-items:center ;
     justify-content: space-around;
-
+    padding: 0px;
+    font-size: 3vh;
+    
 }
 
-#nav-ul {
-    display: flex;
-}
-
-#nav-ul > li {
-    padding: 8px;
-    margin: 16px;
-}
-
-body > header > nav > ul{
+body > header > nav > ul
+{
     list-style: none;
     text-decoration: none;
    
@@ -51,35 +61,11 @@ body > header > nav > ul{
     text-decoration: none;
     padding:12px;
     border: 1px solid white;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 
-body > main article{
-    width: 70%;
-    margin: auto;
-}
 
-#main-content {
-    display: flex;
-    justify-content: space-around;
-    
-}
 
-#main-content > div {
-    width: 70%;
-}
-   
-
-form{
-    text-align: center;
-}
-h2{
-    text-align: center;
-}
-body > footer {
-    background-color: orange;
-    display: flex;
-}
 img{
     border-radius: 100%;
 }
@@ -97,4 +83,23 @@ img{
 #footer-ul > div> li >a {
     color: white;
     text-decoration: none;
+}
+#page-footer {
+    color: rebeccapurple;
+    text-decoration: none;
+
+}
+
+body > main > div > article {
+    display: grid; 
+}
+
+#sidebar {
+    display: grid;
+    grid-template-columns: 1
+}
+
+body > main > div > article {
+    display: grid;
+    grid-template-columns: 2
 }
